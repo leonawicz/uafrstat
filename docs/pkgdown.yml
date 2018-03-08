@@ -1,5 +1,9 @@
 urls:
   reference: http://leonawicz.github.io//reference
   article: http://leonawicz.github.io//articles
-articles: []
+articles:
+  info: info.html
+  schedule: schedule.html
+  syllabus: syllabus.html
+  uafrstat: uafrstat.html
 
