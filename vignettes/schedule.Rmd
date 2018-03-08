@@ -1,0 +1,97 @@
+---
+title: "STAT 2XX Course Schedule"
+author: "Matthew Leonawicz"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{STAT 2XX Course Schedule}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+tutorial::go_interactive()
+knitr::opts_chunk$set(
+  collapse = TRUE, comment = "#>", fig.path = "man/figures/README-",
+  message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE
+)
+```
+
+## Introduction to R Programming
+
+The best way to get started is to look ahead to see not only where you will begin but also what you will build up to. Here is a tentative week by week schedule providing an overview of what you will be doing throughout this course.
+
+## Schedule overview
+
+```{r instructor, echo = FALSE}
+weeks <- 1:15
+topics <- c("Software installation. Introduction to R, RStudio, GitHub and DataCamp. Overview of R data types.",
+            "Basic data import/export, manipulation and plotting",
+            "More data manipulation and plotting",
+            "Even more data manipulation and plotting",
+            "Basics of control flow, loops and functions",
+            "Basic probability and statistics",
+            "Intro to dynamic reports and markdown",
+            "Intro to Shiny apps",
+            "More with Shiny",
+            "Using Shiny and Rmarkdown together",
+            "Creating and validating R packages",
+            "Package and function documentation",
+            "Package development continued",
+            "Final projects",
+            "Final projects")
+packages <- c(rep("", 2), 
+              "dplyr, purrr, ggplot2, tibble",
+              "",
+              "",
+              "",
+              "knitr, rmarkdown",
+              "shiny and related packages",
+              "", "",
+              "devtools, usethis",
+              "roxygen2, pkgdown",
+              "", "", "")
+chapters <- c("R4DS Ch. 1, 2, 4, 20; AR: Data structures (optional)", 
+              "R4DS: Ch. 6, 8",
+              "R4DS: Ch. 3, 5, 7, 17 - 18", 
+              "R4DS: Ch. 10, 11 - 12",
+              "R4DS: Ch. 19, 21",
+              "(optional: R4DS: Ch. 13 - 16)",
+              "R4DS: Ch. 26 - 28",
+              "",
+              "",
+              "R4DS: Ch. 29 - 30",
+              "RP: Ch. 1 - 4, 8",
+              "RP: Ch. 5 - 6",
+              "", "", "")
+datacamp <- c(paste("Ch.", 1:6), rep("", 9))
+projects <- c(rep("", 7), "Project 1", rep("", 2), "Project 2", rep("", 3), "Final project")
+x <- tibble::data_frame(Week = weeks, Topics = topics, `Key packages` = packages, 
+                        DataCamp = datacamp, Reading = chapters,
+                        `Key due dates` = projects)
+knitr::kable(x)
+```
+
+#### Reading key
+
+* R4DS: [R for data science](http://r4ds.had.co.nz/)
+* RP: [R packages](http://r4ds.had.co.nz/)
+* AR: [Advanced R](http://r4ds.had.co.nz/)
+
+See the course syllabus for details.
+
+## Additional details
+
+First, note that many chapters in the primary text are fairly short and/or filled with code blocks, printed console output and plots.
+Don't stress if it looks like the number of chapters listed for a given week is unmanageable. It's manageable.
+
+Weeks 1 - 6 focus on the basics of R programming, gets you familiar with the RStudio IDE, and using GitHub to track, back up and share your work.
+Weeks 7 - 10 focus on publishing your work (R code, data, results) online in both static and interactive publication formats.
+Weeks 11 - 12 introduce you to the process and best practices of creating your own R packages.
+Weeks 13 and 14 are optional and time-permitting, but continue with enhancing your ability to develop solid, dependable R packages to encapsulate 
+and document the R code you write for your various projects and analyses.
+The final week is devoted to sharing final projects with classmates.
+
+Text chapters listed as optional are just that, but also highly recommended or I wouldn't mention them. Even if some content in them seems challenging,
+I encourage everyone to push themselves. Don't be shy of the title of the book, "Advanced R". You may find that some sections are easier
+than you expect and help clarify details that are relatively glossed over or ignored in the main text.

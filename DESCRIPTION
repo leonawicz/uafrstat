@@ -1,0 +1,24 @@
+Package: uafrstat
+Version: 0.2.0
+Title: R Package for STAT Course
+Description: This is an R package associate with STAT course.
+Authors@R: c(person("Matthew", "Leonawicz", email = "mfleonawicz@alaska.edu", role = c("aut", "cre")))
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Url: https://github.com/leonawicz/uafrstat
+BugReports: https://github.com/leonawicz/uafrstat/issues
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown,
+    covr
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1
+Imports: 
+    tutorial,
+    tibble,
+    snaputils
+Remotes:
+    leonawicz/snaputils

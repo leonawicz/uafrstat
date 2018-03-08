@@ -1,0 +1,113 @@
+---
+title: "STAT 2XX Course Info"
+author: "Matthew Leonawicz"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{STAT 2XX Course Info}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+tutorial::go_interactive()
+knitr::opts_chunk$set(
+  collapse = TRUE, comment = "#>", fig.path = "man/figures/README-",
+  message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE
+)
+```
+
+## Course information for Introduction to R Programming
+
+Here you will find additional information about the course including:
+
+* additional details regarding the three required projects.
+* initial information regarding R and the RStudio IDE software.
+* initial information regarding git and GitHub.
+* information about interactive DataCamp course usage in this course.
+* a note on R code style guidelines.
+
+## Course projects
+
+The first course project is a webpage that features R code snippets accompanied by embedded console output and figures (plots, tables) in the style of a short, simple tutorial you are presenting to someone regarding how to analyze a small data set in R.
+You will make this using Rmarkdown as an 'R Project' in RStudio. The source code will be in your GitHub R project repository and the generated webpage will also be hosted on your GitHub account via a `docs` folder. More details will be available as we begin to cover reports.
+Note that this project may be a static report.
+
+The second course project will be interactive. You will make a simple Shiny app. To host this, you will use a free account you create with RStudio's [https://shinyapps.io](shinyapps.io) R Shiny app hosting platform. Don't bother making an account now. We'll get to that later.
+
+After completing the second project, you will have an opportunity to go back and make your first project, your tutorial web page, interactive by adding Shiny widgets within it. You can then resubmit the interactive page for extra credit. Note that because your web page runs Shiny, you would then
+host the new version of your web page on the shinyapps.io servers (which run R and Shiny for you) as if it were another Shiny app, and not just in the original `docs` folder of the GitHub repo.
+
+For the final project, you will create your own R package as a type of RStudio Project. Your package will include:
+
+* your own R functions
+* package and function documentation (every exported function must be documented)
+* a main `README.Rmd` Rmarkdown file used for generating the landing page introducing your package (your package will have an auto-generated website)
+* at least one vignette, ideally, `<your_package_name>.Rmd` that provides tutorial-style example usage of your package's functions (and data, if applicable).
+* Your R package will pass the package validation/check system to ensure it is a buildable, shareable, installable, runnable package for different users on different computers.
+
+For extra credit and if you are more advanced/have time and motivation, you may include unit testing, linting, code coverage and continuous integration.
+Feel free to ask me about these things if they interest you. If you already know some of these more advanced topics, please feel free to share them with classmates on Blackboard. This is an introductory course so it cannot get too complex and there simply is not time enough to cover all of even the most basic topics in R programming, development and publishing. But I encourage you to explore beyond what the course offers.
+This is often driven by necessity and you may find a need for something more advanced for your own work. But you may find that that motivation is driven also by pure interest once you settle into the course and begin or continue your journey as an R programmer.
+
+## R and RStudio
+
+You can download and install R from [here](https://cloud.r-project.org/). When installing R, accept the default settings when prompted.
+
+Then you can install the RStudio IDE (integrated development environment) [here](https://www.rstudio.com/products/rstudio/download/).
+For this course you will use RStudio for your R programming. It provides the best setup for good project isolation, management and
+all kinds of high quality coding support to make your work easier and more efficient.
+More details on additional configuring of some RStudio settings will come later.
+
+## GitHub
+
+You will use [GitHub](https://github.com/) with this course. GitHub allows you to store your code in online code repositories. This means your code is backed up as well as easily shareable. A standard when working with RStudio and GitHub is that every individual R project is synonymous with a git repository.
+The directory on your computer where files for one of your R projects are stored will also be a git repository. Git is used for tracking code changes so that you always have access to the complete revision history of your tracked code files. We will learn more about git and GitHub early in the course. For now, create a free user account on GitHub if you do not have one and read online about git and GitHub if you are unfamiliar with it.
+
+## DataCamp
+
+Online tutorials and courses for learning R abound. Most don't go beyond the very basics. Websites offering paid/premium courses tend to go further and teach you to a more satisfying level. I encourage you to explore any supplemental tutorials or courses you find online. How much you learn depends on how motivated you are. [DataCamp](https://www.datacamp.com) is an excellent website offering both free and paid courses. Most are for R, but there are also courses in Python and SQL. They are fully interactive, which puts them leagues beyond static, stale tutorials that give you no feedback or sense of progress.
+
+You will use DataCamp as a component of this course and it will not cost you anything. Just like your textbooks and software, all is free of charge.
+Go to the website and create an account. Explore any of the courses! You don't have to wait for me. 
+For this course, you will use the free `Introduction to R Programming` DataCamp course I have created as a companion to our other learning materials and resources.
+Here's the great news: as an enrolled student in this course, you are not restricted to my and others' free DataCamp courses. You will also have six months of complete access to all of DataCamp's premium courses for free!
+
+Below is an example of a basic exercise from a DataCamp course. The instructions are to assign the value of 5 to the variable x.
+Exercises in a DataCamp course may also offer a `Hint` option you can click on to help you when you get stuck, like this one:
+
+* Assignment is does using the `<-` operator. For example, `a <- 1` stores the value of 1 in the object `a`.
+
+Try the embedded exercise here by filling in the missing line of code after each comment (comments are lines starting with `#`) and then press `Run`. You can press `Solution` to see the answer. Try submitting wrong answers as well. The exercise will provide feedback.
+
+
+```{r ex="create_x", type="pre-exercise-code"}
+# no pec
+```
+
+```{r ex="create_x", type="sample-code"}
+# Create a variable x, equal to 5
+
+# Print out x
+
+```
+
+```{r ex="create_x", type="solution"}
+# Create a variable x, equal to 5
+x <- 5
+
+# Print out x
+x
+```
+
+```{r ex="create_x", type="sct"}
+test_object("x")
+test_output_contains("x", incorrect_msg = "Make sure to print `x`.")
+success_msg("Great job!")
+```
+
+<br>
+
+## Style guide
+
+As you write R code throughout this course, consult this [style guide](http://adv-r.had.co.nz/Style.html) repeatedly until you find that you have taken to writing clean, readable and consistently styled R code without having to think about it. The style guide linked here is not meant to be a rigid requirement, but for the purposes of this course I suggest sticking to it as much as possible.

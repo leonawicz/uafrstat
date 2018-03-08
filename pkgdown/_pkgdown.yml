@@ -1,0 +1,47 @@
+url: http://leonawicz.github.io/
+
+template:
+  params:
+    bootswatch: cosmo
+    ganalytics: UA-46129458-3
+
+authors:
+  Matthew Leonawicz:
+    href: http://leonawicz.github.io/
+
+navbar:
+  type: inverse
+  left:
+    - text: ""
+      icon: fa-home fa-lg
+      href: index.html
+    - text: "Schedule"
+      icon: fa-calendar-check-o fa-lg
+      href: articles/schedule.html
+    - text: "Course Info"
+      icon: fa-info-circle fa-lg
+      href: articles/info.html
+    - text: "Syllabus"
+      icon: fa-book fa-lg
+      href: articles/syllabus.html
+    - text: "Reference"
+      href: reference/index.html
+    - text: "News"
+      href: news/index.html
+  right:
+    - text: "Instructor"
+      menu:
+        - text: "GitHub"
+          icon: fa-github fa-lg
+          href: https://github.com/leonawicz
+        - text: "Twitter"
+          icon: fa-twitter fa-lg
+          href: https://twitter.com/leonawicz
+        - text: "LinkedIn"
+          icon: fa-linkedin fa-lg
+          href: https://www.linkedin.com/in/leonawicz
+        - text: "Blog"
+          icon: fa-rss-square fa-lg
+          href: https://leonawicz.github.io/blog
+    - icon: fa-github fa-lg
+      href: https://github.com/leonawicz/uafrstat
